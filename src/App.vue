@@ -1,12 +1,8 @@
 <template>
   <v-app>
-  <v-navigation-drawer app>
- 
-  </v-navigation-drawer>
-
-  <v-app-bar app>
-   
-  </v-app-bar>
+    <NavBar />
+    <Drawer />
+  
 
   <v-content>
 
@@ -22,10 +18,14 @@
 
 <script>
 
-
+import NavBar from "./components/NavBar"
+import Drawer from "./components/Drawer"
 export default {
   name: "App",
-
+  components: {
+    NavBar,
+    Drawer
+  }
  
 };
 </script>
