@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app clipped-left dark color="purple">
-    <v-app-bar-nav-icon @click="drawer ? hideDrawer() : showDrawer()" />
+    <v-app-bar-nav-icon v-if="user" @click="drawer ? hideDrawer() : showDrawer()" />
     <v-toolbar-title class="font-weight-light">
       <span>Movies</span>
       <span class="font-weight-regular">DB</span>
@@ -14,6 +14,7 @@ export default {
   computed: {
     ...mapGetters({
       drawer: 'getDrawer',
+      user: "getUser",
       
     }),
   },
